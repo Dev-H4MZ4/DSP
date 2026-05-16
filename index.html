@@ -9,10 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     
-    <script src="./plotly.js"></script>
-    <link rel="stylesheet" href="./atom-one-dark.min.css">
-    <script src="./highlight.min.js"></script>
-
+    <script src="https://unpkg.com/plotly.js-dist-min@2.24.1/plotly.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.8.0/styles/atom-one-dark.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.8.0/highlight.min.js"></script>
     <style>
         :root {
             --primary: #0ea5e9;
@@ -376,9 +375,6 @@
         plotDiv.offsetHeight; 
         plotDiv.style.animation = null; 
 
-        // -------------------------------------------------------------------
-        // التعديل هنا: كود مبسط جداً بدون ألوان أو تفاصيل إضافية
-        // -------------------------------------------------------------------
         let contCode = isContinuous ? `\nplt.plot(n, x)  # رسم خط متصل (Continuous)` : ``;
         let contExp = isContinuous ? `<li><code>plt.plot(n, x)</code>: تمت إضافة هذا السطر لأنك قمت بتفعيل خيار "توصيل النقاط". دالة <code>plot</code> تقوم برسم خط متصل (Continuous) يمر بجميع النقاط ليوضح لك غلاف ومسار الإشارة (Envelope).</li>` : ``;
 
